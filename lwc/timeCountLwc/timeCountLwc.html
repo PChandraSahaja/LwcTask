@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Exipry Date Calculation" icon-name="standard:account">
+            <lightning-input type="datetime" onchange={datehandler} name="input" label="Enter Date" ></lightning-input>
+            <button onclick={currenthandler}>Check Expiry </button>
+            <div>
+                <template if:true={showExpiry}>
+                    <div>
+                        <p>Hi,{message}--{expirydate}</p>
+                        <p>Expiry_Date__c</p>
+                    </div>
+                </template>
+            </div>
+    </lightning-card>
+</template>

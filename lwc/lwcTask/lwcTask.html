@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="ExpiryDate Count" icon-name="standard:account">
+      <template if:false={expiry}>
+        <div class="slds-m-around_medium">
+            <div style="font-size: 30px;text-align:center;">
+                Hello,{message}<br/>
+              <b>{showtime}</b> 
+            </div>
+        </div>
+      </template>
+      <template if:true={expiry}>
+          <div class="slds-m-around_medium">
+              <div style="font-size: 30px;text-align:center;" class="slds-text-color_error">
+                <b>{showtime}</b>
+              </div>
+            </div>
+      </template>
+    </lightning-card>
+  </template>
